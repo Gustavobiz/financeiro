@@ -14,7 +14,6 @@ import login from "./controllers/user/authController.js"
 import verificationToken from "./middleware/validationToken.js"
 //rotas de usuario
 router.post('/user/create', userCreateController);
-router.put('/user/delete',userDeleteController);
 //rotas de Carteira
 router.put('/carteira/update', carteiraUpdateController);
 //rotas de cripto compradas
@@ -25,7 +24,7 @@ router.get('/cripto/user/findMany', criptoUserFindMany);
 router.get('/cripto/findMany', criptoFindMany);
 router.post('/cripto/find', verificationToken, criptoFind);
 //login
-router.post("/login", login)
+
  
 
 export default router;
