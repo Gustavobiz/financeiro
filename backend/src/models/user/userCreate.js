@@ -3,6 +3,7 @@ import crypto from "crypto"
 const prisma = new PrismaClient();
 
 export default async function execute(nome, cpf, email,senha, login ) {
+  console.log("mias");
   try {
     const hashHex = crypto.createHash('md5',"UrubuPaoMago").digest('hex');
     const senhaHash = crypto.createHash('sha256',senha).digest('hex');
@@ -21,8 +22,10 @@ export default async function execute(nome, cpf, email,senha, login ) {
         }
       },
     });
+    console.log("cria");
     return create;
   } catch (err) {
+    console.log("erri:"+ err);
     throw err;
   } finally {
     prisma.$disconnect();
