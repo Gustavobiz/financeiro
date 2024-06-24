@@ -111,104 +111,32 @@ export default function NewUser() {
       setSend(false);
     }
   }
+ 
 
-  return (
-    <>
-      <Stack sx={styles.container}>
-        <Paper sx={styles.paper}>
-          <img style={{ width: "80px", height: "auto" }} src={logoClaro} />
 
-          <TextField
-            error={send && (!nome || nome == "")}
-            helperText={
-              send && (!nome || nome == "") && "A senha não poder nula"
-            }
-            label="Nome"
-            variant="outlined"
-            sx={styles.formW}
-            value={nome}
-            onChange={(event) => setNome(event.target.value)}
-          />
-          <TextField
-            error={send && (!email || email == "")}
-            helperText={
-              send && (!email || email == "") && "A senha não poder nula"
-            }
-            label="Email"
-            variant="outlined"
-            sx={styles.formW}
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-          />
-          <TextField
-            error={send && (!cpf || cpf == "")}
-            helperText={send && (!cpf || cpf == "") && "A senha não poder nula"}
-            label="CPF"
-            variant="outlined"
-            sx={styles.formW}
-            value={cpf}
-            onChange={(event) => setCpf(event.target.value)}
-          />
+  debugger
 
-          <TextField
-            error={send && (!login || login == "")}
-            helperText={
-              send && (!login || login == "") && "A senha não poder nula"
-            }
-            label="Login"
-            variant="outlined"
-            sx={styles.formW}
-            value={login}
-            onChange={(event) => setLogin(event.target.value)}
-          />
-          <TextField
-            error={send && (!senha || senha == "")}
-            helperText={
-              send && (!senha || senha == "") && "A senha não poder nula"
-            }
-            label="Senha"
-            variant="outlined"
-            sx={styles.formW}
-            value={senha}
-            onChange={(event) => setSenha(event.target.value)}
-          />
-          <TextField
-            error={send && (!senhaConfirm || senhaConfirm == "")}
-            helperText={
-              send &&
-              (!senhaConfirm || senhaConfirm == "") &&
-              "A senha não poder nula"
-            }
-            label="Comfirmação de Senha"
-            variant="outlined"
-            sx={styles.formW}
-            value={senhaConfirm}
-            onChange={(event) => setSenhaConfirm(event.target.value)}
-          />
-          <Button
-            variant="contained"
-            sx={styles.formW}
-            color="secondary"
-            onClick={() => handleCadastro()}
-          >
-            
-            Cadastrar
-          </Button>
-        </Paper>
-      </Stack>
-      <Snackbar
-        open={openSnack.status}
-        autoHideDuration={2000}
-        onClose={oncloseSnack}
-      >
-        <Alert
-          severity={openSnack.type}
-          variant="filled"
-          sx={{ width: "100%" }}
-        >
-          {openSnack.text}
-        </Alert>
-      </Snackbar>
-    </>
-  );
-}
+  debuggerd
+  d
+
+  decodeURI
+
+
+
+
+  d
+
+
+
+
+
+
+  d
+
+
+
+
+  d
+
+
+  d
