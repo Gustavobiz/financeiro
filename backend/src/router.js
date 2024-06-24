@@ -26,5 +26,6 @@ router.get('/cripto/findMany', criptoFindMany);
 router.post('/cripto/find', verificationToken, criptoFind);
 //login
 router.post("/login", login)
+ 
 
 export default router;

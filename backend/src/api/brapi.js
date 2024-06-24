@@ -75,3 +75,4 @@ export async function getCoinPrice(cripto) {
         throw err
     }
 }
+

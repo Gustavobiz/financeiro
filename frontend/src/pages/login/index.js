@@ -130,7 +130,6 @@ export default function Login() {
             helperText={
               send && (!senha || senha == "") && "A senha não poder nula"
             }
-            type="password"
             label="Senha"
             variant="outlined"
             sx={styles.formW}

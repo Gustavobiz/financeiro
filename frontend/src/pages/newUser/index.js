@@ -111,6 +111,7 @@ export default function NewUser() {
       setSend(false);
     }
   }
+
   return (
     <>
       <Stack sx={styles.container}>
@@ -148,7 +149,6 @@ export default function NewUser() {
             value={cpf}
             onChange={(event) => setCpf(event.target.value)}
           />
-
 
           <TextField
             error={send && (!login || login == "")}
