@@ -1,0 +1,41 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+model Usuario {
+  id       Int      @id @default(autoincrement())
+  email    String   @unique
+  login    String   @unique
+  senha    String
+  nome     String
+  cpf      String
+  secretKey String
+  Carteira Carteira? 
+  Criptos  CriptoComprada[] 
+}
+
+model Carteira {
+  id         Int    @id @default(autoincrement())
+  valor      Int
+  usuarioId  Int    @unique
+  Usuario    Usuario @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+}
+
+model CriptoComprada {
+  id          Int      @id @default(autoincrement())
+  nomeCripto  String
+  quantidade  Float
+  precoCompra Float
+  usuarioId   Int
+  Usuario     Usuario @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+}
