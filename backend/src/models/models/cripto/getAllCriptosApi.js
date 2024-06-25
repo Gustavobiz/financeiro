@@ -1,4 +1,4 @@
-import { getCoins, getCoin } from "../../api/brapi.js";
+import { getCoins, getCoin } from "../../api/coincap.js";
 export default async function execute(usuarioId) {
   try {
     let coins = await getCoins();
